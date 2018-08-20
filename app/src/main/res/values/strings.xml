@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">XCite</string>
+    <string name="app_name">xCite</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="citations">Citations</string>
+    <string name="quotes">Quotes</string>
+    <string name="library">Library</string>
 </resources>
