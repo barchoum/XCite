@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:name="com.masterraven.xcite.ModulesFragment"
+    android:id="@+id/modules_frag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.masterraven.xcite.MainActivity">
+    tools:layout="@layout/frag_modules" />
 
-    <TextView
-        style="@style/module_texts"
-        android:text="@string/citations"
-        android:background="@color/CornflowerBlue" />
-    <TextView
-        style="@style/module_texts"
-        android:text="@string/quotes"
-        android:background="@color/Olive" />
-    <TextView
-        style="@style/module_texts"
-        android:text="@string/library"
-        android:background="@color/Tomato"/>
-
-</LinearLayout>
