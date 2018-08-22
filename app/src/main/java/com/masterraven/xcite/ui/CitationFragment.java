@@ -1,4 +1,4 @@
-package com.masterraven.xcite;
+package com.masterraven.xcite.ui;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,17 +8,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.masterraven.xcite.R;
+
 import butterknife.ButterKnife;
 
 /**
  * Created by Tahir on 21.8.2018.
  */
 
-public class QuotesFragment extends Fragment {
+public class CitationFragment extends Fragment {
+
+    public CitationFragment(){}
+
+    public static CitationFragment newInstance(){
+        return new CitationFragment();
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.frag_quotes, container, false);
+        final View rootView = inflater.inflate(R.layout.frag_citation, container, false);
         ButterKnife.bind(this, rootView);
 
         return rootView;

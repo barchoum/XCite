@@ -1,4 +1,4 @@
-package com.masterraven.xcite;
+package com.masterraven.xcite.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

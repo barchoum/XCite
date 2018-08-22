@@ -2,7 +2,7 @@
 
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:name="com.masterraven.xcite.ModulesFragment"
+    android:name="com.masterraven.xcite.ui.ModulesFragment"
     android:id="@+id/modules_frag"
     android:layout_width="match_parent"
     android:layout_height="match_parent"

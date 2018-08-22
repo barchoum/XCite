@@ -1,7 +1,9 @@
-package com.masterraven.xcite;
+package com.masterraven.xcite.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.masterraven.xcite.R;
 
 public class MainActivity extends AppCompatActivity {
 
