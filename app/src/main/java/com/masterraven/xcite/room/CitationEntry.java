@@ -16,15 +16,6 @@ public class CitationEntry {
     @ColumnInfo(name = "_id")
     private int id;
 
-    @ColumnInfo(name = "last_name")
-    private String lastName;
-
-    @ColumnInfo(name = "first_name")
-    private String firstName;
-
-    @ColumnInfo(name = "middle_name")
-    private String middleName;
-
     @ColumnInfo(name = "year_published")
     private String yearPublished;
 
@@ -37,12 +28,8 @@ public class CitationEntry {
     private Date updatedAt;
 
     @Ignore
-    public CitationEntry(String lastName, String firstName, String middleName,
-                         String yearPublished, String bookName, String city, String state,
+    public CitationEntry(String yearPublished, String bookName, String city, String state,
                          String publisher, String url, Date updatedAt){
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.middleName = middleName;
         this.yearPublished = yearPublished;
         this.bookName = bookName;
         this.city = city;
@@ -52,13 +39,9 @@ public class CitationEntry {
         this.updatedAt = updatedAt;
     }
 
-    public CitationEntry(int id, String lastName, String firstName, String middleName,
-                         String yearPublished, String bookName, String city, String state,
+    public CitationEntry(int id, String yearPublished, String bookName, String city, String state,
                          String publisher, String url, Date updatedAt){
         this.id = id;
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.middleName = middleName;
         this.yearPublished = yearPublished;
         this.bookName = bookName;
         this.city = city;
@@ -74,30 +57,6 @@ public class CitationEntry {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getMiddleName() {
-        return middleName;
-    }
-
-    public void setMiddleName(String middleName) {
-        this.middleName = middleName;
     }
 
     public String getYearPublished() {

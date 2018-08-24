@@ -11,7 +11,8 @@ import android.util.Log;
  * Created by Tahir on 23.8.2018.
  */
 
-@Database(entities = {CitationEntry.class}, version = 1, exportSchema = false)
+@Database(entities = {CitationEntry.class, AuthorEntry.class, CitationAuthorJoin.class},
+        version = 1, exportSchema = false)
 @TypeConverters(DateConverter.class)
 public abstract class AppDatabase extends RoomDatabase {
 
@@ -34,4 +35,6 @@ public abstract class AppDatabase extends RoomDatabase {
     }
 
     public abstract CitationDao citationDao();
+    public abstract AuthorDao authorDao();
+    public abstract CitationAuthorJoinDao citationAuthorJoinDao();
 }
