@@ -16,7 +16,7 @@ import java.util.List;
 
 @Dao
 public interface AuthorDao {
-    @Query("SELECT * FROM task ORDER BY priority")
+    @Query("SELECT * FROM authors")
     LiveData<List<AuthorEntry>> loadAllAuthors();
 
     @Insert
@@ -28,7 +28,7 @@ public interface AuthorDao {
     @Delete
     void deleteAuthor(AuthorEntry authorEntry);
 
-    @Query("SELECT * FROM task WHERE id = :id")
+    @Query("SELECT * FROM authors WHERE _id = :id")
     LiveData<AuthorEntry> loadAuthorById(int id);
 
 }

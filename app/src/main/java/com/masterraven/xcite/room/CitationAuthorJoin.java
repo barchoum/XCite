@@ -1,5 +1,6 @@
 package com.masterraven.xcite.room;
 
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
 
@@ -8,22 +9,22 @@ import android.arch.persistence.room.ForeignKey;
  */
 
 @Entity(tableName = "citation_author_join",
-        primaryKeys = {"citationId", "authorId"},
+        primaryKeys = {"c_id", "a_id"},
         foreignKeys = {
                 @ForeignKey(entity = CitationEntry.class,
-                            parentColumns = "id",
-                            childColumns = "citationId"),
+                            parentColumns = "_id",
+                            childColumns = "c_id"),
                 @ForeignKey(entity = AuthorEntry.class,
-                            parentColumns = "id",
-                            childColumns = "authorId")
+                            parentColumns = "_id",
+                            childColumns = "a_id")
         })
 public class CitationAuthorJoin {
 
-    public final int citationId;
-    public final int authorId;
+    public final int c_id;
+    public final int a_id;
 
-    public CitationAuthorJoin(int citationId, int authorId) {
-        this.citationId = citationId;
-        this.authorId = authorId;
+    public CitationAuthorJoin(int c_id, int a_id) {
+        this.c_id = c_id;
+        this.a_id = a_id;
     }
 }

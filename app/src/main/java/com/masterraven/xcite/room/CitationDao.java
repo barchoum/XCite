@@ -17,7 +17,7 @@ import java.util.List;
 @Dao
 public interface CitationDao {
 
-    @Query("SELECT * FROM task ORDER BY priority")
+    @Query("SELECT * FROM citations")
     LiveData<List<CitationEntry>> loadAllCitations();
 
     @Insert
@@ -29,6 +29,6 @@ public interface CitationDao {
     @Delete
     void deleteCitation(CitationEntry citationEntry);
 
-    @Query("SELECT * FROM task WHERE id = :id")
+    @Query("SELECT * FROM citations WHERE _id = :id")
     LiveData<CitationEntry> loadCitationById(int id);
 }

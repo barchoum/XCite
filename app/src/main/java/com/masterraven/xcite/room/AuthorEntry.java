@@ -14,7 +14,7 @@ public class AuthorEntry {
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "_id")
-    private int id;
+    private int authorId;
 
     @ColumnInfo(name = "last_name")
     private String lastName;
@@ -33,11 +33,19 @@ public class AuthorEntry {
         this.middleName = middleName;
     }
 
-    public AuthorEntry(int id, String lastName, String firstName, String middleName) {
-        this.id = id;
+    public AuthorEntry(int authorId, String lastName, String firstName, String middleName) {
+        this.authorId = authorId;
         this.lastName = lastName;
         this.firstName = firstName;
         this.middleName = middleName;
+    }
+
+    public int getAuthorId() {
+        return authorId;
+    }
+
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public String getLastName() {

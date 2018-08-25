@@ -1,5 +1,6 @@
 package com.masterraven.xcite.room;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
@@ -16,12 +17,12 @@ public interface CitationAuthorJoinDao {
     void insert(CitationAuthorJoin citationAuthorJoin);
 
     @Query("SELECT * FROM citations INNER JOIN citation_author_join ON " +
-            "citations._id=citation_author_join.citationId WHERE " +
-            "citation_author_join.authorId=:authorId")
-    List<CitationEntry> getCitationsForAuthor(final int authorId);
+            "citations._id=citation_author_join.c_id WHERE " +
+            "citation_author_join.a_id=:a_id")
+    LiveData<CitationEntry> getCitationsForAuthor(final int a_id);
 
     @Query("SELECT * FROM authors INNER JOIN citation_author_join ON" +
-            " author._id=citation_author_join.authorId WHERE " +
-            "citation_author_join.citationId=:citationID")
-    List<AuthorEntry> getAuthorsForCitation(final int citationId);
+            " authors._id=citation_author_join.a_id WHERE " +
+            "citation_author_join.c_id=:c_id")
+    LiveData<AuthorEntry> getAuthorsForCitation(final int c_id);
 }

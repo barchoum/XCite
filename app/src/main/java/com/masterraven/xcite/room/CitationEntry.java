@@ -14,7 +14,7 @@ import java.util.Date;
 public class CitationEntry {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "_id")
-    private int id;
+    private int citationId;
 
     @ColumnInfo(name = "year_published")
     private String yearPublished;
@@ -39,9 +39,9 @@ public class CitationEntry {
         this.updatedAt = updatedAt;
     }
 
-    public CitationEntry(int id, String yearPublished, String bookName, String city, String state,
+    public CitationEntry(int citationId, String yearPublished, String bookName, String city, String state,
                          String publisher, String url, Date updatedAt){
-        this.id = id;
+        this.citationId = citationId;
         this.yearPublished = yearPublished;
         this.bookName = bookName;
         this.city = city;
@@ -51,12 +51,12 @@ public class CitationEntry {
         this.updatedAt = updatedAt;
     }
 
-    public int getId() {
-        return id;
+    public int getCitationId() {
+        return citationId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCitationId(int citationId) {
+        this.citationId = citationId;
     }
 
     public String getYearPublished() {
