@@ -4,4 +4,6 @@
     <string name="citations">Citations</string>
     <string name="quotes">Quotes</string>
     <string name="library">Library</string>
+    <string name="create_new">Create New</string>
+    <string name="my_projects">My Projects</string>
 </resources>

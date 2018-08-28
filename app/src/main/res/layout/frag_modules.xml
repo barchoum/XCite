@@ -1,26 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context="com.masterraven.xcite.ui.MainActivity">
 
-    <TextView
-        android:id="@+id/citation_textview"
-        style="@style/module_texts"
-        android:text="@string/citations"
-        android:background="@color/CornflowerBlue" />
-    <TextView
-        android:id="@+id/quotes_textview"
-        style="@style/module_texts"
-        android:text="@string/quotes"
-        android:background="@color/Olive" />
-    <TextView
-        android:id="@+id/library_textview"
-        style="@style/module_texts"
-        android:text="@string/library"
-        android:background="@color/Tomato"/>
+    <android.support.v7.widget.CardView
+        style="@style/card_view_style"
+        app:cardBackgroundColor="@color/CornflowerBlue">
+        <TextView
+            android:id="@+id/citation_textview"
+            style="@style/module_texts"
+            android:text="@string/citations" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/my_projects_text_view"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="24dp"
+            android:text="@string/my_projects"
+            android:textSize="16sp"
+            android:textColor="@color/DarkRed"/>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_create"/>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        style="@style/card_view_style"
+        app:cardBackgroundColor="@color/Olive" >
+        <TextView
+            android:id="@+id/quotes_textview"
+            style="@style/module_texts"
+            android:text="@string/quotes" />
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        style="@style/card_view_style"
+        android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/Tomato">
+        <TextView
+            android:id="@+id/library_textview"
+            style="@style/module_texts"
+            android:text="@string/library"/>
+    </android.support.v7.widget.CardView>
+
 
 </LinearLayout>

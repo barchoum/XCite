@@ -19,36 +19,50 @@ public class CitationEntry {
     @ColumnInfo(name = "year_published")
     private String yearPublished;
 
-    @ColumnInfo(name = "book_name")
-    private String bookName;
+    // Such as book name, newspaper name or magazin name
+    @ColumnInfo(name = "main_title")
+    private String mainTitle;
+
+    // Article title from a magazin, website, journal or newspaper
+    @ColumnInfo(name = "article_title")
+    private String articleTitle;
 
     private String city, state, publisher, url;
 
     @ColumnInfo(name = "updated_at")
     private Date updatedAt;
 
+    @ColumnInfo(name = "citation_type")
+    private String citationType;
+
     @Ignore
-    public CitationEntry(String yearPublished, String bookName, String city, String state,
-                         String publisher, String url, Date updatedAt){
+    public CitationEntry(String yearPublished, String mainTitle, String articleTitle, String city,
+                         String state, String publisher, String url, Date updatedAt,
+                         String citationType){
         this.yearPublished = yearPublished;
-        this.bookName = bookName;
+        this.mainTitle = mainTitle;
+        this.articleTitle = articleTitle;
         this.city = city;
         this.state = state;
         this.publisher = publisher;
         this.url = url;
         this.updatedAt = updatedAt;
+        this.citationType = citationType;
     }
 
-    public CitationEntry(int citationId, String yearPublished, String bookName, String city, String state,
-                         String publisher, String url, Date updatedAt){
+    public CitationEntry(int citationId, String yearPublished, String mainTitle, String articleTitle,
+                         String city, String state, String publisher, String url, Date updatedAt,
+                         String citationType){
         this.citationId = citationId;
         this.yearPublished = yearPublished;
-        this.bookName = bookName;
+        this.mainTitle = mainTitle;
+        this.articleTitle = articleTitle;
         this.city = city;
         this.state = state;
         this.publisher = publisher;
         this.url = url;
         this.updatedAt = updatedAt;
+        this.citationType = citationType;
     }
 
     public int getCitationId() {
@@ -67,12 +81,20 @@ public class CitationEntry {
         this.yearPublished = yearPublished;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getMainTitle() {
+        return mainTitle;
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
+    public void setMainTitle(String mainTitle) {
+        this.mainTitle = mainTitle;
+    }
+
+    public String getArticleTitle() {
+        return articleTitle;
+    }
+
+    public void setArticleTitle(String articleTitle) {
+        this.articleTitle = articleTitle;
     }
 
     public String getCity() {
@@ -113,5 +135,13 @@ public class CitationEntry {
 
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public String getCitationType() {
+        return citationType;
+    }
+
+    public void setCitationType(String citationType) {
+        this.citationType = citationType;
     }
 }
