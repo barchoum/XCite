@@ -9,7 +9,8 @@
 
     <android.support.v7.widget.CardView
         style="@style/card_view_style"
-        app:cardBackgroundColor="@color/CornflowerBlue">
+        app:cardBackgroundColor="@color/CornflowerBlue"
+        android:id="@+id/citation_card_view">
         <TextView
             android:id="@+id/citation_textview"
             style="@style/module_texts"
@@ -29,12 +30,14 @@
             app:fabSize="mini"
             android:layout_gravity="end|bottom"
             android:layout_margin="16dp"
-            android:src="@drawable/ic_create"/>
+            android:src="@drawable/ic_create"
+            android:id="@+id/citation_fab_create"/>
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
         style="@style/card_view_style"
-        app:cardBackgroundColor="@color/Olive" >
+        app:cardBackgroundColor="@color/Olive"
+        android:id="@+id/quotes_card_view">
         <TextView
             android:id="@+id/quotes_textview"
             style="@style/module_texts"
@@ -45,7 +48,8 @@
     <android.support.v7.widget.CardView
         style="@style/card_view_style"
         android:layout_marginBottom="8dp"
-        app:cardBackgroundColor="@color/Tomato">
+        app:cardBackgroundColor="@color/Tomato"
+        android:id="@+id/library_card_view">
         <TextView
             android:id="@+id/library_textview"
             style="@style/module_texts"

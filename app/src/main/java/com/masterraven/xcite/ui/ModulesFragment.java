@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,9 +29,11 @@ import static com.masterraven.xcite.Constants.QUOTES;
 
 public class ModulesFragment extends Fragment {
 
-    @BindView(R.id.citation_textview) TextView citation;
-    @BindView(R.id.quotes_textview) TextView quotes;
-    @BindView(R.id.library_textview) TextView library;
+    @BindView(R.id.citation_card_view) CardView citation;
+    @BindView(R.id.quotes_card_view) CardView quotes;
+    @BindView(R.id.library_card_view) CardView library;
+    @BindView(R.id.citation_fab_create) FloatingActionButton fab;
+    @BindView(R.id.my_projects_text_view) TextView myProjectsTextView;
     boolean isDualPane;
     FragmentManager fm;
 
@@ -41,8 +45,15 @@ public class ModulesFragment extends Fragment {
 
         fm = getActivity().getSupportFragmentManager();
 
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
-        citation.setOnClickListener(new View.OnClickListener() {
+            }
+        });
+
+
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(isDualPane){

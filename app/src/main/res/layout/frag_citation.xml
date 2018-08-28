@@ -1,33 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
 
     <!--fix layout-->
+    <!--last, first, middle, year, book name, city, state, publisher, url, article title, journal title, web page title, notes-->
 
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/last_name"
+        android:hint="@string/last_name"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/first_name"
+        android:hint="@string/first_name"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/middle_name"
+        android:hint="@string/middle_name"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/year_published"
+        android:hint="@string/publish_date"
+        android:inputType="date"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/source_name"
+        android:hint="@string/source_name"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/city"
+        android:hint="@string/city"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/state"
+        android:hint="@string/state"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/publisher"
+        android:hint="@string/publisher"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/url"
+        android:hint="@string/source_url"
+        android:inputType="textUri"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/article_title"
+        android:hint="@string/article_title"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/journal_title"
+        android:hint="@string/journal_title"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:id="@+id/web_page_title"
+        android:hint="@string/web_title"/>
+    <EditText
+        style="@style/citation_edit_text"
+        android:layout_height="120dp"
+        android:id="@+id/notes"
+        android:hint="@string/notes"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Create New"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/create_new"/>
-
-    <Button
-        android:id="@+id/my_projects"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="My Projects"
-        app:layout_constraintStart_toStartOf="@+id/create_new"
-        app:layout_constraintTop_toBottomOf="@+id/create_new" />
-
-
-</android.support.constraint.ConstraintLayout>
+        android:gravity="center"
+        android:id="@+id/take_a_pic"
+        android:text="@string/take_picture"
+        android:layout_margin="12dp"/>
+</LinearLayout>
+</ScrollView>

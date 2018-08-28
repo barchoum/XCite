@@ -6,4 +6,19 @@
     <string name="library">Library</string>
     <string name="create_new">Create New</string>
     <string name="my_projects">My Projects</string>
+    <string name="last_name">Last Name</string>
+    <string name="middle_name">Middle Name</string>
+    <string name="first_name">First Name</string>
+    <string name="source_name">Source Name</string>
+    <string name="publish_date">Publish Date</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="publisher">Publisher</string>
+    <string name="source_url">Source Url</string>
+    <string name="source_type">Source Type</string>
+    <string name="notes">Notes</string>
+    <string name="article_title">Article Title</string>
+    <string name="journal_title">Journal Title</string>
+    <string name="web_title">Web Page Title</string>
+    <string name="take_picture">Take A Picture</string>
 </resources>

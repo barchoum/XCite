@@ -21,7 +21,6 @@ import butterknife.ButterKnife;
 
 public class CitationFragment extends Fragment {
 
-    @BindView(R.id.create_new) TextView createTextView;
 
     public CitationFragment(){}
 
@@ -35,15 +34,6 @@ public class CitationFragment extends Fragment {
         final View rootView = inflater.inflate(R.layout.frag_citation, container, false);
         ButterKnife.bind(this, rootView);
 
-        createTextView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                CreateCitationFragment fragment = new CreateCitationFragment();
-                fragment.show(ft,"dialogFragment");
-            }
-        });
 
         return rootView;
     }
