@@ -45,13 +45,6 @@ public class ModulesFragment extends Fragment {
 
         fm = getActivity().getSupportFragmentManager();
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
 
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

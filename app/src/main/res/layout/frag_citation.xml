@@ -1,77 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent">
-<LinearLayout
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
-    <!--fix layout-->
-    <!--last, first, middle, year, book name, city, state, publisher, url, article title, journal title, web page title, notes-->
-
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/last_name"
-        android:hint="@string/last_name"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/first_name"
-        android:hint="@string/first_name"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/middle_name"
-        android:hint="@string/middle_name"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/year_published"
-        android:hint="@string/publish_date"
-        android:inputType="date"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/source_name"
-        android:hint="@string/source_name"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/city"
-        android:hint="@string/city"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/state"
-        android:hint="@string/state"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/publisher"
-        android:hint="@string/publisher"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/url"
-        android:hint="@string/source_url"
-        android:inputType="textUri"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/article_title"
-        android:hint="@string/article_title"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/journal_title"
-        android:hint="@string/journal_title"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:id="@+id/web_page_title"
-        android:hint="@string/web_title"/>
-    <EditText
-        style="@style/citation_edit_text"
-        android:layout_height="120dp"
-        android:id="@+id/notes"
-        android:hint="@string/notes"/>
-    <Button
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:id="@+id/take_a_pic"
-        android:text="@string/take_picture"
-        android:layout_margin="12dp"/>
-</LinearLayout>
+        android:layout_height="wrap_content">
+
+        <!--add radio button for citation type and project spinner-->
+        <EditText
+            android:id="@+id/last_name"
+            style="@style/citation_edit_text"
+            android:hint="@string/last_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/first_name"
+            style="@style/citation_edit_text"
+            android:hint="@string/first_name"
+            app:layout_constraintTop_toBottomOf="@+id/last_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/middle_name"
+            style="@style/citation_edit_text"
+            android:hint="@string/middle_name"
+            app:layout_constraintTop_toBottomOf="@+id/first_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/year_published"
+            style="@style/citation_edit_text"
+            android:hint="@string/publish_date"
+            android:inputType="date"
+            app:layout_constraintTop_toBottomOf="@+id/middle_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/source_name"
+            style="@style/citation_edit_text"
+            android:hint="@string/source_name"
+            app:layout_constraintTop_toBottomOf="@+id/year_published"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/city"
+            style="@style/citation_edit_text"
+            android:hint="@string/city"
+            app:layout_constraintTop_toBottomOf="@+id/source_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/state"
+            style="@style/citation_edit_text"
+            android:hint="@string/state"
+            app:layout_constraintTop_toBottomOf="@+id/city"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/publisher"
+            style="@style/citation_edit_text"
+            android:hint="@string/publisher"
+            app:layout_constraintTop_toBottomOf="@+id/state"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/url"
+            style="@style/citation_edit_text"
+            android:hint="@string/source_url"
+            android:inputType="textUri"
+            app:layout_constraintTop_toBottomOf="@+id/publisher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/sub_title"
+            style="@style/citation_edit_text"
+            android:hint="@string/sub_title"
+            app:layout_constraintTop_toBottomOf="@+id/url"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <EditText
+            android:id="@+id/notes"
+            style="@style/citation_edit_text"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/notes"
+            app:layout_constraintTop_toBottomOf="@+id/sub_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notes">
+
+            <Button
+                android:id="@+id/save_citation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="2"
+                android:text="@string/save_citation" />
+
+            <Button
+                android:id="@+id/cancel_saving"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="2"
+                android:text="@string/cancel" />
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 </ScrollView>

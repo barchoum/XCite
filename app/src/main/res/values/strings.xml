@@ -21,4 +21,7 @@
     <string name="journal_title">Journal Title</string>
     <string name="web_title">Web Page Title</string>
     <string name="take_picture">Take A Picture</string>
+    <string name="save_citation">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="sub_title">Sub Title</string>
 </resources>
